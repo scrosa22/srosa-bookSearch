@@ -16,10 +16,15 @@ const typeDefs = gql`
         link: String
         title: String!
     }
+    type Auth {
+        token: ID!
+        user: User
+    }
     type Query {
         user(userId: ID!): User
         me: User
     }
+    
     type Mutation {
         addUser(username: String!, email: String!, password: String!): Auth
         login(email: String!, password: String!): Auth
