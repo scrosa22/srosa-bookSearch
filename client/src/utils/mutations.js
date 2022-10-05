@@ -20,7 +20,7 @@ type Mutation {
 
 export const REMOVE_BOOK = gql`
 type Mutation {
-    addBook(removeBook(userId: ID!, authors: [String], description: String!, bookId: String!, image: String, link: String, title: String!): User
+    addBook(authors: [String], description: String!, bookId: String!, image: String, link: String, title: String!): User
 }`;
 
 export const LOGIN_USER = gql`
