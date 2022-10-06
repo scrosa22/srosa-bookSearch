@@ -3,7 +3,7 @@ const { ApolloServer } = require("apollo-server-express");
 const path = require("path");
 const { typeDefs, resolvers } = require("../server/schema");
 const db = require("./config/connection");
-const routes = require("./routes");
+// const routes = require("./routes");
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
-app.use(routes);
+// app.use(routes);
 
 const startApolloServer = async (typeDefs, resolvers) => {
   await server.start();
